@@ -12,6 +12,20 @@ export class AppComponent {
   title = 'cliente';
   posts = [];
 
+  boton = {
+    inicio : "active",
+    acerca : "",
+    turnos : "",
+    buscar : "",
+  }
+
+  activado = "";
+  activar(boton){
+    this.boton[this.activado] = "";
+    this.boton[boton] = "active";
+    this.activado = boton;
+  }
+
   constructor(private dataService: DataService){
     this.dataService.getData().subscribe(data =>{
       console.log(data);

@@ -1,9 +1,11 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-<ul>
-    <li><a routerLink="/">Home</a></li>
-    <li><a routerLink="/about">About</a></li>
-    <li><a routerLink="/turnos">Turnos</a></li>
-</ul>
+
+<nav class="nav nav-pills nav-justified">
+  <a class="nav-item nav-link {{boton.inicio}}" routerLink="/" (click) ="activar('inicio')">Inicio</a>
+  <a class="nav-item nav-link {{boton.acerca}}" routerLink="/about" (click) ="activar('acerca')">Acerca De</a>
+  <a class="nav-item nav-link {{boton.acerca}}" routerLink="/turnos"(click) ="activar('turno')">Turnos</a>
+  <a class="nav-item nav-link disabled" routerLink="/" tabindex="-1" aria-disabled="true">Buscar Turno</a>
+</nav>
 
 <router-outlet></router-outlet>
