@@ -9,10 +9,12 @@ import { DataService } from './data.service';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Route } from '@angular/router';
 import { AboutComponent } from './about/about.component';
+import { TurnosComponent } from './turnos/turnos.component';
 
 const routes : Route[] = [
    {path: '', component: HolaMundoComponent},
-   {path: 'about', component: AboutComponent}
+   {path: 'about', component: AboutComponent},
+   {path: 'turnos', component: TurnosComponent}
 ]
 
 @NgModule({
@@ -20,7 +22,8 @@ const routes : Route[] = [
     AppComponent,
     HolaMundoComponent,
     UserComponent,
-    AboutComponent
+    AboutComponent,
+    TurnosComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,13 @@
+<div class="row" style="padding: 3%">
+    <div class="card border-primary mb-3" style="width: 50%;" *ngFor="let turno of turnos" >
+        <div class="card-header">{{turno.appointment_date}}</div>
+        <div class="card-body text-primary">
+          <h5 class="card-title">{{turno.speciality_name}}</h5>
+          <p class="card-text">Dr. {{turno.hcp_first_name +" " +turno.hcp_last_name}}</p>
+        </div>
+        <div class="card-footer bg-transparent border-primary">
+            <button type="button" class="btn btn-outline-primary">Detalle</button>
+            <button type="button" class="btn btn-outline-secondary">Cancelar Turno</button>
+        </div>
+      </div>
+</div>
