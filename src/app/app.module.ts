@@ -11,12 +11,14 @@ import { RouterModule, Route } from '@angular/router';
 import { AboutComponent } from './about/about.component';
 import { TurnosComponent } from './turnos/turnos.component';
 import { BuscarTurnoComponent } from './buscar-turno/buscar-turno.component';
+import { LoginComponent } from './login/login.component';
 
 const routes : Route[] = [
    {path: '', component: HolaMundoComponent},
    {path: 'about', component: AboutComponent},
    {path: 'turnos', component: TurnosComponent},
-   {path: 'buscar-turno', component: BuscarTurnoComponent}
+   {path: 'buscar-turno', component: BuscarTurnoComponent},
+   {path: 'login', component: LoginComponent}
 ]
 
 @NgModule({
@@ -26,7 +28,8 @@ const routes : Route[] = [
     UserComponent,
     AboutComponent,
     TurnosComponent,
-    BuscarTurnoComponent
+    BuscarTurnoComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
