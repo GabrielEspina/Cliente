@@ -10,11 +10,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Route } from '@angular/router';
 import { AboutComponent } from './about/about.component';
 import { TurnosComponent } from './turnos/turnos.component';
+import { BuscarTurnoComponent } from './buscar-turno/buscar-turno.component';
 
 const routes : Route[] = [
    {path: '', component: HolaMundoComponent},
    {path: 'about', component: AboutComponent},
-   {path: 'turnos', component: TurnosComponent}
+   {path: 'turnos', component: TurnosComponent},
+   {path: 'buscar-turno', component: BuscarTurnoComponent}
 ]
 
 @NgModule({
@@ -23,7 +25,8 @@ const routes : Route[] = [
     HolaMundoComponent,
     UserComponent,
     AboutComponent,
-    TurnosComponent
+    TurnosComponent,
+    BuscarTurnoComponent
   ],
   imports: [
     BrowserModule,

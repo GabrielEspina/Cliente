@@ -1,15 +1,21 @@
+
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
+<!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<!-- Side navigation -->
-<div class="sidenav">
-    <a routerLink="/" (click) ="activar('inicio')">Inicio</a>
-    <a routerLink="/about" (click) ="activar('acerca')">Acerca De</a>
-    <a routerLink="/turnos"(click) ="activar('turno')">Turnos</a>
-    <a routerLink="/" aria-disabled="true">Buscar Turno</a>
-  </div>
-  
+  <div id="mySidebar" class="sidebar">
+      <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
+      <a routerLink="/" (click) ="manageSideBar()">Inicio</a>
+      <a routerLink="/about" (click) ="manageSideBar()">Acerca De</a>
+      <a routerLink="/turnos"(click) ="manageSideBar()">Turnos</a>
+      <a routerLink="/buscar-turno" (click) ="manageSideBar()">Buscar Turno</a>
+    </div>
+
+    <div id="main">
+      <button class="openbtn" (click)="manageSideBar()">&#9776; </button> 
+    </div>
   <!-- Page content -->
-  <div class="main">
+  <div>
       <router-outlet></router-outlet>
   </div>
