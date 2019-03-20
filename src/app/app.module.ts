@@ -15,6 +15,9 @@ import { TurnosComponent } from './turnos/turnos.component';
 import { BuscarTurnoComponent } from './buscar-turno/buscar-turno.component';
 import { LoginComponent } from './login/login.component';
 import { TurnoComponent } from './turno/turno.component';
+import { PacientesComponent } from './pacientes/pacientes.component';
+import { MockServerService } from './services/mock-server.service';
+
 
 const routes : Route[] = [
    {path: '', component: HolaMundoComponent},
@@ -35,7 +38,8 @@ const routes : Route[] = [
     TurnosComponent,
     BuscarTurnoComponent,
     LoginComponent,
-    TurnoComponent
+    TurnoComponent,
+    PacientesComponent
   ],
   imports: [
     NgbModule,
@@ -43,7 +47,7 @@ const routes : Route[] = [
     HttpClientModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [DataService],
+  providers: [DataService,MockServerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
