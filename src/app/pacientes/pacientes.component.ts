@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MockServerService } from '../services/mock-server.service';
 import { Patient } from '../model/patient.model';
 
+
 @Component({
   selector: 'app-pacientes',
   templateUrl: './pacientes.component.html',
@@ -9,10 +10,13 @@ import { Patient } from '../model/patient.model';
 })
 export class PacientesComponent implements OnInit {
 
-  errorMessage = "No se encuentran pacientes";
+  pacientes = [];
 
   constructor(private mock: MockServerService) {
-    alert(this.mock.getPatients());
+    this.mock.getPatients().subscribe(data => {
+      console.log(data);
+      this.pacientes = data;
+    })
    }
 
   ngOnInit() {

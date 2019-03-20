@@ -26,6 +26,7 @@ const routes : Route[] = [
    {path: 'buscar-turno', component: BuscarTurnoComponent},
    {path: 'login', component: LoginComponent},
    {path: 'turno', component: TurnoComponent},
+   {path: 'pacientes', component: PacientesComponent}
 
 ]
 
