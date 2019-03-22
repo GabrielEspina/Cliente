@@ -1,0 +1,15 @@
+{
+    "appointment": {
+            "id": 753,
+            "clinic_id": 123,
+            "clinic_name": "Clinica de la trinidad",
+            "speciality_id": 789,
+            "speciality_name": "Guardia de ginecologia",
+            "hcp_id": 8560,
+            "hcp_first_name": "Juan Jose",
+            "hcp_last_name": "Ingenieros",
+            "appointment_date": "2018/01/02 18:00",
+            "appointment_status_id": 1,
+            "appointment_status_name": "Pending"
+    }
+}
