@@ -16,6 +16,7 @@ import { TurnoComponent } from './turno/turno.component';
 import { PacientesComponent } from './pacientes/pacientes.component';
 import { MockServerService } from './services/mock-server.service';
 import { DetalleTurnoComponent } from './turnos/detalle-turno/detalle-turno.component';
+import { CardTurnoComponent } from './turnos/card-turno/card-turno.component';
 
 
 const routes : Route[] = [
@@ -26,7 +27,8 @@ const routes : Route[] = [
    {path: 'login', component: LoginComponent},
    {path: 'turno', component: TurnoComponent},
    {path: 'pacientes', component: PacientesComponent},
-   {path: 'detalle-turnos', component: DetalleTurnoComponent}
+   {path: 'detalle-turnos', component: DetalleTurnoComponent},
+   {path: 'card-turno', component: CardTurnoComponent}
 
 ]
 
@@ -41,7 +43,8 @@ const routes : Route[] = [
     LoginComponent,
     TurnoComponent,
     PacientesComponent,
-    DetalleTurnoComponent
+    DetalleTurnoComponent,
+    CardTurnoComponent
   ],
   imports: [
     NgbModule,
